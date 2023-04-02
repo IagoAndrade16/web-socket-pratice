@@ -1,10 +1,4 @@
-import express from "express"
-const app = express()
+import { server } from "./http";
+import "./websocket/ChatService"
 
-app.get("/", (request, response) => {
-  return response.json({
-    message: 'Hello websocket'
-  })
-})
-
-app.listen(3000, () => console.log("Server is running on port 3000"))
+server.listen(3000, () => console.log("Server is running on port 3000"))
