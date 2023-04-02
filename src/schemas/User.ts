@@ -2,14 +2,14 @@ import mongoose, { Document, Schema} from "mongoose"
 
 type User = Document & {
   email: string;
-  socketId: string;
+  socket_id: string;
   name: string;
   avatar: string;
 }
 
 const UsersSchema = new Schema({
   email: String,
-  socketId: String,
+  socket_id: String,
   name: String,
   avatar: String,
 })
