@@ -116,10 +116,10 @@ document.getElementById("users_list").addEventListener("click", (e) => {
       notification.remove();
     }
 
-    socket.emit("start_chat", { idUser }, (response) => {
-      idChatRoom = response.room.idChatRoom;
+    socket.emit("start_chat", { idUser }, (room) => {
+      idChatRoom = room.idChatRoom;
 
-      response.messages.forEach((message) => {
+      messages.forEach((message) => {
         const data = {
           message,
           user: message.to,
